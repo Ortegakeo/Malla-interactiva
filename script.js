@@ -5,13 +5,8 @@ const malla = [
   { nombre: "Física Aplicada", semestre: 1, requisitos: [] },
   { nombre: "Estructura y Reactividad Molecular", semestre: 1, requisitos: [] },
   { nombre: "Fundamentos de la Función del Cuerpo Humano I", semestre: 1, requisitos: [] },
-
-  { nombre: "Fundamentos de la Estructura del Cuerpo Humano II", semestre: 2, requisitos: ["Fundamentos de la Estructura del Cuerpo Humano I"] },
-  { nombre: "Matemática y Computación II", semestre: 2, requisitos: ["Matemática y Computación I"] },
-  { nombre: "Fundamentos de la Función del Cuerpo Humano II", semestre: 2, requisitos: ["Fundamentos de la Función del Cuerpo Humano I"] },
-  { nombre: "Bioquímica I", semestre: 2, requisitos: ["Estructura y Reactividad Molecular"] },
-  { nombre: "Metrología de Variables Biomédicas", semestre: 2, requisitos: [] },
-  { nombre: "Inglés I", semestre: 2, requisitos: [] }
+  // Agrega el resto de asignaturas aquí como en tu archivo original
+  { nombre: "Proyecto de Bioingeniería Médica", semestre: 10, requisitos: ["Práctica II"] }
 ];
 
 const estados = ["pendiente", "cursando", "aprobada"];
@@ -25,7 +20,7 @@ function renderMalla() {
   const contenedor = document.getElementById("malla");
   contenedor.innerHTML = "";
 
-  for (let semestre = 1; semestre <= 3; semestre++) {
+  for (let semestre = 1; semestre <= 10; semestre++) {
     const bloque = document.createElement("div");
     bloque.className = "semestre";
     bloque.innerHTML = `<h2>Semestre ${semestre}</h2>`;
@@ -59,4 +54,3 @@ function renderMalla() {
 }
 
 renderMalla();
-
