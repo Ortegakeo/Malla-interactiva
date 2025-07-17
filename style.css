@@ -1,3 +1,4 @@
+/* Fondo universal con imagen fija */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,20 +11,24 @@ body {
   color: #000;
 }
 
+/* Título con fondo blanco semitransparente para legibilidad */
 h1 {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1rem;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
+/* Grid para semestres */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
+/* Bloques semestre */
 .semestre {
   background: rgba(255, 255, 255, 0.9);
   padding: 1rem;
@@ -36,6 +41,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
+/* Asignaturas */
 .asignatura {
   padding: 0.5rem;
   margin: 0.5rem 0;
@@ -43,20 +49,39 @@ h1 {
   cursor: pointer;
   transition: background 0.3s ease;
   text-align: center;
+  user-select: none;
+  font-weight: 600;
 }
 
-.pendiente { background: #f8d7da; color: #721c24; }
-.cursando { background: #fff3cd; color: #856404; }
-.aprobada { background: #d4edda; color: #155724; }
-.bloqueada { background: #e2e3e5; color: #6c757d; cursor: not-allowed; }
+.pendiente {
+  background: #f8d7da;
+  color: #721c24;
+}
 
-/* RESPONSIVE */
+.cursando {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.aprobada {
+  background: #d4edda;
+  color: #155724;
+}
+
+.bloqueada {
+  background: #e2e3e5;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive: tablets */
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Responsive: móviles */
 @media (max-width: 600px) {
   body {
     padding: 0.5rem;
